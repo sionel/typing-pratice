@@ -1,0 +1,63 @@
+[
+  {
+    "keys": "home-row-left",
+    "name": "왼손중앙자리",
+    "type-keys": ["ㅁ", "ㄴ", "ㅇ", "ㄹ"]
+  },
+  {
+    "keys": "home-row-right",
+    "name": "오른손중앙자리",
+    "type-keys": ["ㅓ", "ㅏ", "ㅣ", ";"]
+  },
+  {
+    "keys": "top-left-keys",
+    "name": "왼손윗자리",
+    "type-keys": ["ㅂ", "ㅈ", "ㄷ", "ㄱ"]
+  },
+  {
+    "keys": "bottom-left-keys",
+    "name": "왼손아랫자리",
+    "type-keys": ["ㅋ", "ㅌ", "ㅊ", "ㅍ"]
+  },
+  {
+    "keys": "middle-keys",
+    "name": "가운데자리",
+    "type-keys": ["ㅅ", "ㅛ", "ㅎ", "ㅗ", "ㅠ", "ㅜ"]
+  },
+  {
+    "keys": "top-right-keys",
+    "name": "오른손윗자리",
+    "type-keys": ["ㅕ", "ㅑ", "ㅐ", "ㅔ"]
+  },
+  {
+    "keys": "bottom-right-keys",
+    "name": "오른손아랫자리",
+    "type-keys": ["ㅜ", "ㅡ", ",", "."]
+  },
+  {
+    "keys": "all-keys",
+    "name": "전체자리",
+    "type-keys": []
+  },
+  {
+    "keys": "number-keys",
+    "name": "숫자자리",
+    "type-keys": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "0",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/"
+    ]
+  }
+]
