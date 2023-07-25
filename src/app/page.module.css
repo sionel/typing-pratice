@@ -7,16 +7,26 @@
   min-height: 100vh;
   background-color: #ccc;
 }
+@keyframes changeFontWeight {
+  0% {
+    font-weight: 100;
+  }
+  100% {
+    font-weight: 900;
+  }
+}
 
 .box {
-   width:200px;
-   height: 80px;
-   border: #fff solid 1px;
-   border-radius: 20px;
-   background-color: #fff;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   text-align: center;
-
+  width: 200px;
+  height: 80px;
+  border: #fff solid 1px;
+  border-radius: 20px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  /* animation: changeFontWeight 3s linear  alternate infinite ; */
 }
+
