@@ -2,12 +2,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 
-const word = ["ㅁ", "ㄴ", "ㅇ", "ㄹ"];
+const word = ["ㅓ", "ㅏ", "ㅣ", ";"];
 
 const Typing = (props: any) => {
   const [wordList, setWordList] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [inputValue, setInputValue] = useState("");
+  const keyPressedRef = useRef(false); // 키가 눌려진 상태를 저장하는 ref
 
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const getWords = () => {
@@ -30,17 +31,34 @@ const Typing = (props: any) => {
     setSelectedIndex(index);
   };
 
-  const handleKeyDownInput: React.ChangeEventHandler<HTMLInputElement> = (
-    e
-  ) => {
+  const handleChangeInput: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+
     const value = e.target.value;
-    if (wordList[selectedIndex] === value) {
-      setSelectedIndex(selectedIndex + 1);
-      setInputValue("");
+    if (wordList[selectedIndex].length === value.length) {
+      if (wordList[selectedIndex] === value) {
+        setSelectedIndex(selectedIndex + 1);
+        setInputValue("");
+      } else {
+        setInputValue("");
+      }
     } else {
       setInputValue(e.target.value);
     }
   };
+  const handleKeyDownInput: React.KeyboardEventHandler<HTMLInputElement> = (
+    e
+  ) => {
+    if (!keyPressedRef.current) {
+      keyPressedRef.current = true;
+    } else {
+      e.preventDefault();
+    }
+  };
+
+  const handleKeyUpInput = () => {
+    keyPressedRef.current = false;
+  };
+
   return (
     <div
       style={{
@@ -73,7 +91,9 @@ const Typing = (props: any) => {
       <input
         className={styles.centered_input}
         type="text"
-        onChange={handleKeyDownInput}
+        onChange={handleChangeInput}
+        onKeyDown={handleKeyDownInput}
+        onKeyUp={handleKeyUpInput}
         value={inputValue}
       />
       <div>3</div>
