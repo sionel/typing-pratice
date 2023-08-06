@@ -1,28 +1,38 @@
 .carousel_container {
   overflow-x: hidden;
-  /* width: 100%; */
   height: 200px;
 }
 
 .word_carousel {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  left: calc(50% - 100px);
+  flex-wrap: nowrap;
+  transition: left 0.1s ease-out;
+
 }
 
 .word_item {
-  width: 200px; /* Adjust the width of each word item as needed. */
+  width: 400px; /* Adjust the width of each word item as needed. */
   height: 200px; /* Adjust the height of each word item as needed. */
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #ccc;
-  margin-right: 10px; /* Add some spacing between word items. */
+  margin-right: 50px; /* Add some spacing between word items. */
   cursor: pointer;
 }
 
 .word_item.selected {
   background-color: #f0f0f0; /* Add a different background color for the selected item. */
   font-weight: bold; /* Add additional styles for the selected item. */
+}
+
+.centered_input {
+  font-size: 30px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 10px 15px;
+  caret-color: transparent; /* 커서 깜빡임을 없애기 위함 */
+  line-height: 30px;
+  text-align: center;
 }
