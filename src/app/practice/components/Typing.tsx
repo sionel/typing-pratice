@@ -32,7 +32,6 @@ const Typing = (props: any) => {
   };
 
   const handleChangeInput: React.ChangeEventHandler<HTMLInputElement> = (e) => {
-
     const value = e.target.value;
     if (wordList[selectedIndex].length === value.length) {
       if (wordList[selectedIndex] === value) {

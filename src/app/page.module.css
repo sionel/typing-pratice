@@ -28,5 +28,7 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
+  text-decoration:none;
+  color: dodgerblue;
   /* animation: changeFontWeight 3s linear  alternate infinite ; */
 }
